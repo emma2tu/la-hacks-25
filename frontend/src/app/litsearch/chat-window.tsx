@@ -44,32 +44,42 @@ const Chat = () => {
                 {/* Conditional rendering for the chat window content */}
                 {isOpen && (
                     <>
-                        <div className="p-4">
-                            <h2 className="text-xl h-full">Research Copilot Chat</h2>
-                        </div>
+                        <div className="max-w-4xl max-h-135 overflow-auto m-4">
+                            <div className="m-4 rounded-lg h-64">
+                                <InfoCard
+                                    title="Research on AI"
+                                    images={[
+                                        'https://via.placeholder.com/150',
+                                        'https://via.placeholder.com/150',
+                                    ]}
+                                    findings="Our research suggests that AI could improve automation in many industries."
+                                    readMore="https://example.com/research"
+                                />
+                            </div>
 
-                        <div className="m-4 outline outline-1 rounded-lg">
-                            <InfoCard
-                                title="Research on AI"
-                                images={[
-                                    'https://via.placeholder.com/150',
-                                    'https://via.placeholder.com/150'
-                                ]}
-                                findings="Our research suggests that AI could improve automation in many industries."
-                                readMore="https://example.com/research"
-                            />
-                        </div>
+                            <div className="m-4  rounded-lg h-64">
+                                <InfoCard
+                                    title="Research on AI"
+                                    images={[
+                                        'https://via.placeholder.com/150',
+                                        'https://via.placeholder.com/150',
+                                    ]}
+                                    findings="Our research suggests that AI could improve automation in many industries."
+                                    readMore="https://example.com/research"
+                                />
+                            </div>
 
-                        <div className="m-4 outline outline-1 rounded-lg">
-                            <InfoCard
-                                title="Research on AI"
-                                images={[
-                                    'https://via.placeholder.com/150',
-                                    'https://via.placeholder.com/150'
-                                ]}
-                                findings="Our research suggests that AI could improve automation in many industries."
-                                readMore="https://example.com/research"
-                            />
+                            <div className="m-4  rounded-lg h-64">
+                                <InfoCard
+                                    title="Research on AI"
+                                    images={[
+                                        'https://via.placeholder.com/150',
+                                        'https://via.placeholder.com/150',
+                                    ]}
+                                    findings="Our research suggests that AI could improve automation in many industries."
+                                    readMore="https://example.com/research"
+                                />
+                            </div>
                         </div>
 
 
@@ -78,7 +88,7 @@ const Chat = () => {
 
                         {/* Textarea and icons */}
                         <div className="rounded-xl w-8/9 h-35 absolute bottom-10 left-5 mx-auto mt-50">
-                            <TbRobot size={35} />
+                            {/* <TbRobot size={35} /> */}
                             <button
                                 // onClick={handleSpeechToText}
                                 className="absolute top-[125px] left-3 text-2xl text-gray-600 cursor-pointer"
@@ -94,7 +104,7 @@ const Chat = () => {
 
                             <textarea
                                 id="message"
-                                className="w-full h-30 mt-2 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+                                className="w-full h-30 mt-10 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
                                 placeholder="Find me papers about..."
                                 rows={4}
                                 value={text}

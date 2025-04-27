@@ -9,7 +9,7 @@ interface InfoCardProps {
 
 const InfoCard: React.FC<InfoCardProps> = ({ title, images, findings, readMore }) => {
   return (
-    <div className="info-card bg-white p-4 rounded-lg shadow-lg">
+    <div className="info-card bg-white outline outline-1 outline-gray-400 p-4 rounded-lg shadow-lg">
       {/* Title */}
       <h2 className="text-xl font-semibold mb-4">{title}</h2>
 
