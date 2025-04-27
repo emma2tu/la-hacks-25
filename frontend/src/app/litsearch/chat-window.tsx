@@ -44,40 +44,43 @@ const Chat = () => {
                 {/* Conditional rendering for the chat window content */}
                 {isOpen && (
                     <>
-                        <div className="max-w-4xl max-h-135 overflow-auto m-4">
-                            <div className="m-4 rounded-lg h-64">
+                        <div className="max-w-4xl max-h-135 overflow-auto m-4 ">
+                            <div className="m-4 rounded-lg ">
                                 <InfoCard
                                     title="Research on AI"
                                     images={[
-                                        'https://via.placeholder.com/150',
-                                        'https://via.placeholder.com/150',
+                                        'https://clevertap.com/wp-content/uploads/2019/04/Neural_Network_Brain_Mimic.jpeg',
+                              
                                     ]}
                                     findings="Our research suggests that AI could improve automation in many industries."
                                     readMore="https://example.com/research"
+                    
                                 />
                             </div>
 
-                            <div className="m-4  rounded-lg h-64">
+                            <div className="m-4 rounded-lg ">
                                 <InfoCard
                                     title="Research on AI"
                                     images={[
-                                        'https://via.placeholder.com/150',
-                                        'https://via.placeholder.com/150',
+                                        'https://miro.medium.com/v2/resize:fit:1024/0*lyVC9DDkDSbWyC71.jpg',
+                                   
                                     ]}
                                     findings="Our research suggests that AI could improve automation in many industries."
                                     readMore="https://example.com/research"
+                              
                                 />
                             </div>
 
-                            <div className="m-4  rounded-lg h-64">
+                            <div className="m-4 rounded-lg ">
                                 <InfoCard
                                     title="Research on AI"
                                     images={[
-                                        'https://via.placeholder.com/150',
-                                        'https://via.placeholder.com/150',
+                                        'https://www.aamc.org/sites/default/files/medical-research-lab.jpg',
+                                
                                     ]}
                                     findings="Our research suggests that AI could improve automation in many industries."
                                     readMore="https://example.com/research"
+                            
                                 />
                             </div>
                         </div>
@@ -134,5 +137,3 @@ const Chat = () => {
 };
 
 export default Chat;
-
-

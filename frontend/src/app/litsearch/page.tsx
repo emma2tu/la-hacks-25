@@ -2,9 +2,8 @@ import Navbar from './navbar';
 import DotGridBackground from './grid-bg';
 import ChatWindow from './chat-window'
 import React, { useState } from 'react';
-import Card from './drag-n-drop';
 import {DndContext} from '@dnd-kit/core';
-
+import DragComponents from '../drag/page';
 
 
 // import {Draggable} from './Draggable';
@@ -17,6 +16,7 @@ export default function LitSearch() {
             <div className="absolute inset-0 h-full w-full bg-[#F5F5F5] bg-[radial-gradient(#A9A9A9,transparent_1px)] [background-size:16px_16px]"></div>
             <Navbar/>
             <ChatWindow/>
+            <DragComponents />
         </div>
     );
 }

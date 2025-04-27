@@ -1,4 +1,5 @@
 import React from 'react';
+import DragComponents from '../drag/page';
 
 const DotGridBackground = () => {
   const backgroundStyle = {
@@ -9,11 +10,17 @@ const DotGridBackground = () => {
     `,
     backgroundSize: '40px 40px', // Control dot size and spacing
     backgroundRepeat: 'repeat', // Repeat the pattern across the screen
-    height: '1000px', // Full height of the viewport
+    height: '120px', // Full height of the viewport
     margin: 0,
   };
 
-  return <div style={backgroundStyle}></div>;
+  return <div style={backgroundStyle}>
+    <div className="absolute inset-0 h-full w-full bg-[#F5F5F5] bg-[radial-gradient(#A9A9A9,transparent_1px)] [background-size:16px_16px]"></div>
+    <DragComponents />
+  </div>;
 };
 
 export default DotGridBackground;
+
+
+
