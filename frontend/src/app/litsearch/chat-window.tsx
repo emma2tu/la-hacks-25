@@ -6,6 +6,7 @@ import { HiOutlineMicrophone } from 'react-icons/hi';
 import { IoArrowUpCircleOutline } from 'react-icons/io5';
 import { IoIosArrowForward } from "react-icons/io";
 import { IoIosArrowBack } from "react-icons/io";
+import InfoCard from '../component';
 
 const Chat = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -44,9 +45,33 @@ const Chat = () => {
                 {isOpen && (
                     <>
                         <div className="p-4">
-                            <h2 className="text-xl h-full">Chat</h2>
-                            <p>This window can open and close.</p>
+                            <h2 className="text-xl h-full">Research Copilot Chat</h2>
                         </div>
+
+                        <div className="m-4 outline outline-1 rounded-lg">
+                            <InfoCard
+                                title="Research on AI"
+                                images={[
+                                    'https://via.placeholder.com/150',
+                                    'https://via.placeholder.com/150'
+                                ]}
+                                findings="Our research suggests that AI could improve automation in many industries."
+                                readMore="https://example.com/research"
+                            />
+                        </div>
+
+                        <div className="m-4 outline outline-1 rounded-lg">
+                            <InfoCard
+                                title="Research on AI"
+                                images={[
+                                    'https://via.placeholder.com/150',
+                                    'https://via.placeholder.com/150'
+                                ]}
+                                findings="Our research suggests that AI could improve automation in many industries."
+                                readMore="https://example.com/research"
+                            />
+                        </div>
+
 
                         {/* Close button in the window */}
 
@@ -88,12 +113,12 @@ const Chat = () => {
                 {isOpen ? <IoIosArrowForward size={20} /> : <IoIosArrowBack size={20} />}
             </button> */}
 
-<button
-    className={`absolute top-80 ${isOpen ? 'right-94' : 'right-9'} p-4 bg-gray-200 text-gray-800 rounded-full transition-all duration-300`}
-    onClick={toggleWindow}
->
-    {isOpen ? <IoIosArrowForward size={20} /> : <IoIosArrowBack size={20} />}
-</button>
+            <button
+                className={`absolute top-80 ${isOpen ? 'right-94' : 'right-9'} p-4 bg-gray-200 text-gray-800 rounded-full transition-all duration-300`}
+                onClick={toggleWindow}
+            >
+                {isOpen ? <IoIosArrowForward size={20} /> : <IoIosArrowBack size={20} />}
+            </button>
         </div>
     );
 };
