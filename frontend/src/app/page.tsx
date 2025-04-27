@@ -20,7 +20,7 @@ export default function Home() {
         <div className="w-[1293px] h-[1236px] left-[766px] top-[299px] absolute bg-[radial-gradient(ellipse_50.00%_50.00%_at_50.00%_50.00%,_rgba(104,_159.77,_220.86,_0.68)_0%,_rgba(255,_255,_255,_0)_100%)] rounded-full"></div>
         <div className="w-[1293px] h-[1236px] left-[-630px] top-[-687px] absolute bg-[radial-gradient(ellipse_50.00%_50.00%_at_50.00%_50.00%,_rgba(104,_159.77,_220.86,_0.68)_0%,_rgba(255,_255,_255,_0)_100%)] rounded-full"></div>
         <div className="w-80 h-24 left-[547.59px] top-[447.22px] absolute bg-white rounded-xl border-[0.79px] border-zinc-500"></div>
-        <div className="w-56 h-7 left-[591.29px] top-[461.52px] absolute justify-start text-black text-sm font-normal font-['Inter']">Find me papers about... </div>
+        <div className="w-56 h-7 left-[570px] top-[461.52px] absolute justify-start text-black text-big font-normal font-['Inter']">Find me papers about... </div>
         <div className="w-36 h-12 left-[1262px] top-[22px] absolute rounded-[34px] border border-black"></div>
       </div>
     </div>
