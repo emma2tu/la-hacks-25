@@ -16,7 +16,7 @@ def ask_gemini(prompt):
 def identify_relevant_papers(titles, title_abstract_pairs, title_to_url_dict, research_topic):
     """
     Based on the list of titles and abstracts (TO DO)
-    have gemini return a list of 3-5 papers it finds most relevant to the research_topic.
+    have gemini return a list of 3 papers it finds most relevant to the research_topic.
     """ 
     input_string = ""
     for idx, (title, abstract) in enumerate(title_abstract_pairs, 1):
@@ -36,7 +36,7 @@ def identify_relevant_papers(titles, title_abstract_pairs, title_to_url_dict, re
 def _ask_gemini_relevant_titles(titles_string, input_string, research_topic):
     prompt = f"""
         You are a scientific research assistant.
-        You must select exactly 3 to 5 paper titles that are most relevant to the research topic: "{research_topic}".
+        You must select exactly 3 paper titles that are most relevant to the research topic: "{research_topic}".
         ONLY use titles from the provided list. DO NOT invent new titles. These titles are separated by semicolons and a space.
         Titles: {titles_string}
 

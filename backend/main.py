@@ -3,7 +3,7 @@ from query_generator import identify_research_topic, generate_query
 from web_scraper import scrape_titles_abstracts_urls
 from gemini_api_client import identify_relevant_papers, generate_relevant_findings, assemble_widget_contents
 
-def main(audio_input=None, text_input=None):
+def fill_info_cards(audio_input=None, text_input=None):
 
     # using groq_api_client
     input = ""
@@ -32,13 +32,14 @@ def main(audio_input=None, text_input=None):
     title_to_summary_dict = generate_relevant_findings(relevant_titles, title_to_url_dict, title_to_abstract_dict, research_topic)
     title_summary_abstract_tuples = assemble_widget_contents(relevant_titles, title_to_summary_dict, title_to_abstract_dict)
     
-    # Print widget contents
-    # This is where we should return the data to the frontend
-    for i, (title, summary, abstract) in enumerate(title_summary_abstract_tuples, 1):
-        print(f"PAPER {i}")
-        print(f"Title: {title}")
-        print(f"Relevant Findings: {summary}")
-        print(f"Abstract: {abstract}")
+    cards = []
+    for tuple in title_summary_abstract_tuples:
+        cards.append({ "title": tuple[0], "findings": tuple[1], "readMore": tuple[2] })
+    
+    print("\n")
+    print("\n")
+    print(f"Cards: \n{cards}")
+    return cards
 
 if __name__ == "__main__":
     import sys
@@ -52,5 +53,5 @@ if __name__ == "__main__":
         elif arg.startswith("text_input="):
             text_input = arg.split("=", 1)[1]
 
-    main(audio_input=audio_input, text_input=text_input)
+    fill_info_cards(audio_input=audio_input, text_input=text_input)
 
