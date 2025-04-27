@@ -1,0 +1,8 @@
+{
+    "editor.inlineSuggest.enabled": true,
+    "github.copilot.inlineSuggest.enable": true,
+    "github.copilot.enable": {
+      "*": true
+    },
+    "C_Cpp.errorSquiggles": "enabled"
+}
